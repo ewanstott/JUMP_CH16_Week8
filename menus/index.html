@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Courier New", Courier, monospace;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      nav ul ul {
+        display: none;
+      }
+
+      nav ul li:hover > ul,
+      nav ul li:focus-within > ul {
+        display: inherit;
+      }
+
+      nav {
+        background-color: lightblue;
+        color: white;
+      }
+
+      nav ul li {
+        display: inline-block;
+        background-color: lightblue;
+      }
+
+      nav ul ul {
+        position: absolute;
+        top: 50px;
+        left: 10px;
+      }
+
+      nav ul ul li {
+        display: list-item;
+        width: 170px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        line-height: 50px;
+        font-size: 16px;
+      }
+
+      nav ul {
+        position: relative;
+      }
+
+      nav ul ul li {
+        width: 125px;
+        line-height: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      nav ul ul ul li {
+        position: relative;
+        top: 150px;
+        left: 100px;
+      }
+
+      nav img {
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li>
+            <a href="#"><img src="./hamburger-menu-icon.webp" alt="Menu" /></a>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <a href="#">Home</a>
+            <ul>
+              <li>Home 1</li>
+              <li>Home 2</li>
+              <li>Home 3</li>
+              <li>Home 4</li>
+              <li>Home 5</li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">Products</a>
+            <ul>
+              <li>Product 1</li>
+              <li>Product 2</li>
+              <li>Product 3</li>
+              <li>Product 4</li>
+              <li>
+                <a href="#">More</a>
+                <ul>
+                  <li>Another Product</li>
+                  <li>More Products</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>
